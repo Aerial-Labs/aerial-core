@@ -67,7 +67,7 @@ app.post('/api/checkout', async (c) => {
     formData.append('success_url', `${c.env.FRONTEND_URL}/success?session_id={CHECKOUT_SESSION_ID}`);
     formData.append('cancel_url', `${c.env.FRONTEND_URL}/cancel`);
     formData.append('mode', 'subscription');
-    formData.append('line_items[0][price]', planId || 'price_xxxxxxxx'); // Pro Plan Price ID
+    formData.append('line_items[0][price]', planId || 'price_1TCMjZJx7nEyL2ZozsE7kiUg'); // Real ID as fallback
     formData.append('line_items[0][quantity]', '1');
     formData.append('client_reference_id', userId); // SPEC: 含めること
 

@@ -34,7 +34,7 @@ export default function Home() {
       const res = await fetch(`${API_ROOT}/api/checkout`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId, planId: 'price_xxxxxxxx' }), // Replace with actual Price ID
+        body: JSON.stringify({ userId, planId: 'price_1TCMjZJx7nEyL2ZozsE7kiUg' }), // Real Pro Plan Price ID
       });
       const { url, error } = await res.json();
       if (url) {
