@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS users (
   email TEXT UNIQUE NOT NULL,
   stripe_customer_id TEXT,
   plan TEXT DEFAULT 'free',      -- free, pro
+  status TEXT DEFAULT 'active',  -- active, inactive
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );

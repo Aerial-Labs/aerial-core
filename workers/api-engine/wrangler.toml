@@ -1,0 +1,13 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "api-engine"
+main = "src/index.ts"
+compatibility_date = "2024-03-18"
+
+[vars]
+FRONTEND_URL = "http://localhost:3000"
+# STRIPE_SECRET_KEY = "sk_test_..." (Wrangler Secrets推奨)
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aerial-core-db"
+database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
