@@ -1,0 +1,17 @@
+{
+  "name": "aerial-core",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "db:init": "npx wrangler d1 execute aerial-core-db --local --file=packages/db/schema.sql",
+    "db:shell": "npx wrangler d1 execute aerial-core-db --local",
+    "dev": "npm run dev --workspaces --if-present"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
